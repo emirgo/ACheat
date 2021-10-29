@@ -4,7 +4,6 @@
     <CheatEntry>
       <ID>2</ID>
       <Description>"static"</Description>
-      <LastState Value="014DA260" RealAddress="00509B74"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -13,7 +12,6 @@
     <CheatEntry>
       <ID>3</ID>
       <Description>"health ptr"</Description>
-      <LastState Value="90000" RealAddress="014DA358"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>ac_client.exe+109B74</Address>
@@ -24,7 +22,6 @@
     <CheatEntry>
       <ID>5</ID>
       <Description>"assault rifle ammo ptr"</Description>
-      <LastState Value="1332" RealAddress="014DA3B0"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>ac_client.exe+109B74</Address>
@@ -35,7 +32,6 @@
     <CheatEntry>
       <ID>6</ID>
       <Description>"grenade ptr"</Description>
-      <LastState Value="1337" RealAddress="014DA3B8"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>ac_client.exe+109B74</Address>
@@ -46,7 +42,6 @@
     <CheatEntry>
       <ID>7</ID>
       <Description>"pistol ammo ptr"</Description>
-      <LastState Value="1337" RealAddress="014DA39C"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>ac_client.exe+109B74</Address>
