@@ -2,20 +2,57 @@
 <CheatTable CheatEngineTableVersion="38">
   <CheatEntries>
     <CheatEntry>
-      <ID>0</ID>
-      <Description>"health"</Description>
-      <LastState Value="9999" RealAddress="0158A358"/>
+      <ID>2</ID>
+      <Description>"static"</Description>
+      <LastState Value="014DA260" RealAddress="00509B74"/>
+      <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
-      <Address>0158A358</Address>
+      <Address>ac_client.exe+109B74</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>1</ID>
-      <Description>"entity"</Description>
-      <LastState Value="5130904" RealAddress="0158A260"/>
+      <ID>3</ID>
+      <Description>"health ptr"</Description>
+      <LastState Value="90000" RealAddress="014DA358"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
-      <Address>0158A260</Address>
+      <Address>ac_client.exe+109B74</Address>
+      <Offsets>
+        <Offset>0xf8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"assault rifle ammo ptr"</Description>
+      <LastState Value="1332" RealAddress="014DA3B0"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ac_client.exe+109B74</Address>
+      <Offsets>
+        <Offset>0x150</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"grenade ptr"</Description>
+      <LastState Value="1337" RealAddress="014DA3B8"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ac_client.exe+109B74</Address>
+      <Offsets>
+        <Offset>0x158</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"pistol ammo ptr"</Description>
+      <LastState Value="1337" RealAddress="014DA39C"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ac_client.exe+109B74</Address>
+      <Offsets>
+        <Offset>0x13C</Offset>
+      </Offsets>
     </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
