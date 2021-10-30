@@ -29,12 +29,28 @@ int main()
 
 	std::cout << "AmmoAddr = " << "0x" << std::hex << ammoAddr << std::endl;
 
-	// read ammo value
 
+	while (true)
+	{
+		// read ammo value
+		int ammoValue = 0;
+		ReadProcessMemory(hProcess, (BYTE*)ammoAddr, &ammoValue, sizeof(ammoValue), nullptr);
+		if (ammoValue < 20)
+		{
+			do
+			{
+				// write ammo value
+				int newAmmo = 20;
+				WriteProcessMemory(hProcess, (BYTE*)ammoAddr, &newAmmo, sizeof(newAmmo), nullptr);
 
-	// write ammo value
-
-	// read ammo value to confirm
+				// read ammo value to confirm
+				ReadProcessMemory(hProcess, (BYTE*)ammoAddr, &ammoValue, sizeof(ammoValue), nullptr);
+			} while (ammoValue < 15);
+		}
+		
+		Sleep(100);
+	}
+	
 
 	return 0;
 }
