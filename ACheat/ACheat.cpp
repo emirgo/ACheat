@@ -6,12 +6,12 @@
 #include "proc.h"
 #include "UserSettings.h"
 
+enum Address { HEALTH, ASSAULT_RIFLE_AMMO, PISTOL_AMMO, GRENADE_AMMO };
+
+int maxAmmo = 1337;
 
 int main()
 {
-	// set max ammo
-	UserSettings::maxAmmo = 1337;
-
 	// get procid of the target
 	DWORD procId = getProcId(L"ac_client.exe");
 
@@ -39,19 +39,19 @@ int main()
 		// read ammo value
 		int ammoValue = 0;
 		ReadProcessMemory(hProcess, (BYTE*)ammoAddr, &ammoValue, sizeof(ammoValue), nullptr);
-		if (ammoValue < UserSettings::maxAmmo)
+		if (ammoValue < maxAmmo)
 		{
 			do
 			{
 				// write ammo value
-				WriteProcessMemory(hProcess, (BYTE*)ammoAddr, &UserSettings::maxAmmo, sizeof(UserSettings::maxAmmo), nullptr);
+				WriteProcessMemory(hProcess, (BYTE*)ammoAddr, &maxAmmo, sizeof(maxAmmo), nullptr);
 
 				// read ammo value to confirm
 				ReadProcessMemory(hProcess, (BYTE*)ammoAddr, &ammoValue, sizeof(ammoValue), nullptr);
-			} while (ammoValue < UserSettings::maxAmmo);
+			} while (ammoValue < maxAmmo);
 		}
 		
-		Sleep(100);
+		Sleep(1);
 	}
 	
 
