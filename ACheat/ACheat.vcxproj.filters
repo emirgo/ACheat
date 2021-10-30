@@ -16,6 +16,9 @@
     <Filter Include="proc">
       <UniqueIdentifier>{d0e05ec6-43f1-4eeb-9054-b96955569800}</UniqueIdentifier>
     </Filter>
+    <Filter Include="mem">
+      <UniqueIdentifier>{0c950194-e7a4-471a-a417-4451f071a8ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ACheat.cpp">
@@ -27,6 +30,9 @@
     <ClCompile Include="UserSettings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mem.cpp">
+      <Filter>mem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="proc.h">
@@ -34,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="UserSettings.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mem.h">
+      <Filter>mem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -140,10 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ACheat.cpp" />
+    <ClCompile Include="mem.cpp" />
     <ClCompile Include="proc.cpp" />
     <ClCompile Include="UserSettings.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="mem.h" />
     <ClInclude Include="proc.h" />
     <ClInclude Include="UserSettings.h" />
   </ItemGroup>

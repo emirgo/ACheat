@@ -1,6 +1,5 @@
 #include "proc.h"
 
-
 DWORD getProcId(const wchar_t* procName)
 {
 	DWORD procId = 0;
