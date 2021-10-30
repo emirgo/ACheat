@@ -4,10 +4,14 @@
 
 #include <iostream>
 #include "proc.h"
+#include "UserSettings.h"
 
 
 int main()
 {
+	// set max ammo
+	UserSettings::maxAmmo = 1337;
+
 	// get procid of the target
 	DWORD procId = getProcId(L"ac_client.exe");
 
@@ -35,17 +39,16 @@ int main()
 		// read ammo value
 		int ammoValue = 0;
 		ReadProcessMemory(hProcess, (BYTE*)ammoAddr, &ammoValue, sizeof(ammoValue), nullptr);
-		if (ammoValue < 20)
+		if (ammoValue < UserSettings::maxAmmo)
 		{
 			do
 			{
 				// write ammo value
-				int newAmmo = 20;
-				WriteProcessMemory(hProcess, (BYTE*)ammoAddr, &newAmmo, sizeof(newAmmo), nullptr);
+				WriteProcessMemory(hProcess, (BYTE*)ammoAddr, &UserSettings::maxAmmo, sizeof(UserSettings::maxAmmo), nullptr);
 
 				// read ammo value to confirm
 				ReadProcessMemory(hProcess, (BYTE*)ammoAddr, &ammoValue, sizeof(ammoValue), nullptr);
-			} while (ammoValue < 15);
+			} while (ammoValue < UserSettings::maxAmmo);
 		}
 		
 		Sleep(100);
