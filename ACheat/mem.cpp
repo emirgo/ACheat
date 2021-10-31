@@ -11,5 +11,9 @@ void mem::patchEx(BYTE* dst, BYTE* src, unsigned int size, HANDLE hProcess)
 
 void mem::nopEx(BYTE* dst, unsigned int size, HANDLE hProcess)
 {
+	BYTE* nopArray = new BYTE[size];
+	memset(nopArray, 0x90, size);
 
+	patchEx(dst, nopArray, size, hProcess);
+	delete[] nopArray;
 }
