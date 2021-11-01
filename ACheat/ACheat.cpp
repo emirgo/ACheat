@@ -6,10 +6,6 @@
 #include "proc.h"
 #include "mem.h"
 
-enum Address { HEALTH, ASSAULT_RIFLE_AMMO, PISTOL_AMMO, GRENADE_AMMO };
-
-int maxAmmo = 1337;
-
 int main()
 {
 	HANDLE hProcess = 0;
@@ -59,7 +55,15 @@ int main()
 				mem::patchEx((BYTE*)(moduleBase + 0x637e9), (BYTE*)"\xFF\x0E", 2, hProcess);
 			}
 		}
+
+		if (bHealth)
+		{
+			mem::patchEx((BYTE*)healthAddr, (BYTE*)&newValue, sizeof(newValue), hProcess);
+		}
+
+		Sleep(10);
 	}
 
+	std::cout << "Process not found";
 	return 0;
 }
